@@ -225,7 +225,7 @@ jobs:
                   val client = RtmpFromFile(this, this, this)
                   rtmp = client
 
-                  val videoOk = client.prepareVideo(path, bitrate)
+                  val videoOk = client.prepareVideo(1280, Uri.fromFile(File(path)))
                   val audioOk = client.prepareAudio(path, 128 * 1024)
                   if (!videoOk) {
                       setStatus("Gagal menyiapkan video. Pastikan file berformat MP4 (H.264).")
